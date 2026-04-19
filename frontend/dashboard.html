@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dashboard-page" data-page="dashboard">
+    <div class="dashboard-layout">
+        <aside class="sidebar">
+            <div class="brand">
+                <span class="brand-mark">P</span>
+                <span>User Dashboard App</span>
+            </div>
+
+            <nav class="nav-list" aria-label="Dashboard">
+                <span class="nav-item active">Overview</span>
+                <span class="nav-item">Profile</span>
+                <span class="nav-item">Security</span>
+            </nav>
+
+            <div class="sidebar-footer">
+                <button class="button secondary" id="logoutButton" type="button">Logout</button>
+            </div>
+        </aside>
+
+        <main class="main">
+            <header class="topbar">
+                <div>
+                    <p class="eyebrow">Dashboard</p>
+                    <h1>Welcome, <span id="welcomeName">User</span></h1>
+                </div>
+
+                <div class="profile-chip">
+                    <span class="avatar" aria-hidden="true">U</span>
+                    <div>
+                        <strong id="userName">User</strong>
+                        <span id="userEmail">Loading profile</span>
+                    </div>
+                </div>
+            </header>
+
+            <section class="stats-grid" aria-label="Account summary">
+                <article class="card">
+                    <p class="stat-label">Session</p>
+                    <p class="stat-value">Active</p>
+                    <p class="stat-note">Protected by JWT authentication</p>
+                </article>
+
+                <article class="card">
+                    <p class="stat-label">Joined</p>
+                    <p class="stat-value" id="joinedDate">Today</p>
+                    <p class="stat-note">Account creation date</p>
+                </article>
+
+                <article class="card">
+                    <p class="stat-label">Status</p>
+                    <p class="stat-value">Ready</p>
+                    <p class="stat-note">Profile synced with the server</p>
+                </article>
+            </section>
+
+            <section class="content-grid">
+                <article class="card">
+                    <h2 class="section-title">Recent activity</h2>
+                    <ul class="activity-list">
+                        <li>
+                            <div>
+                                <strong>Signed in successfully</strong>
+                                <span>Your current browser session is active.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <strong>Profile loaded</strong>
+                                <span>Your saved account details are available.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <strong>Dashboard initialized</strong>
+                                <span>The app is connected to the backend API.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </article>
+
+                <article class="card">
+                    <h2 class="section-title">Setup</h2>
+                    <div class="progress-list">
+                        <div class="progress-row">
+                            <div class="progress-meta">
+                                <span>Account</span>
+                                <span>100%</span>
+                            </div>
+                            <div class="progress-track">
+                                <span class="progress-fill green" style="width: 100%"></span>
+                            </div>
+                        </div>
+
+                        <div class="progress-row">
+                            <div class="progress-meta">
+                                <span>Security</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="progress-track">
+                                <span class="progress-fill" style="width: 80%"></span>
+                            </div>
+                        </div>
+
+                        <div class="progress-row">
+                            <div class="progress-meta">
+                                <span>Profile</span>
+                                <span>65%</span>
+                            </div>
+                            <div class="progress-track">
+                                <span class="progress-fill orange" style="width: 65%"></span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

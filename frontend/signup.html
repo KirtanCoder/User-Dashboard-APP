@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="auth-page" data-page="signup">
+    <main class="auth-shell">
+        <section class="brand-panel">
+            <div class="brand">
+                <span class="brand-mark">P</span>
+                <span>User Dashboard App</span>
+            </div>
+
+            <div>
+                <h1>Create your workspace.</h1>
+                <p>Register once and your dashboard will be ready the next time you return.</p>
+            </div>
+
+            <div class="preview-board" aria-hidden="true">
+                <div class="preview-row">
+                    <span class="preview-dot"></span>
+                    <span class="preview-line"></span>
+                    <span class="preview-value"></span>
+                </div>
+                <div class="preview-row">
+                    <span class="preview-dot"></span>
+                    <span class="preview-line"></span>
+                    <span class="preview-value"></span>
+                </div>
+            </div>
+        </section>
+
+        <section class="form-panel">
+            <h2>Signup</h2>
+            <p>Start with your name, email, and password.</p>
+
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" autocomplete="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" autocomplete="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" autocomplete="new-password" minlength="6" required>
+                </div>
+
+                <button class="button" id="signupButton" type="submit">Create account</button>
+                <p class="message" id="msg" role="status" aria-live="polite"></p>
+            </form>
+
+            <p>Already registered? <a class="link-text" href="login.html">Login</a></p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

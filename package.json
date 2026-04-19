@@ -1,0 +1,11 @@
+{
+  "name": "user-dashboard-app",
+  "version": "1.0.0",
+  "description": "Full-stack user authentication dashboard with Express, MongoDB, and JWT.",
+  "private": true,
+  "scripts": {
+    "install:backend": "npm install --prefix backend",
+    "start": "npm start --prefix backend",
+    "check": "npm run check --prefix backend"
+  }
+}
