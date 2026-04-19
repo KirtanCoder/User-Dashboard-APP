@@ -376,6 +376,3 @@ Check these points:
 - Email and password are correct
 - Browser is opened at `http://localhost:8080`
 
-## Project Status
-
-This project is ready for internship submission as a beginner-friendly full-stack authentication dashboard.
