@@ -56,9 +56,12 @@ User Dashboard APP/
 |   |-- signup.html
 |   |-- script.js
 |   `-- styles.css
+|-- api/
+|   `-- index.js
 |-- .gitignore
 |-- package.json
 |-- render.yaml
+|-- vercel.json
 `-- README.md
 ```
 
@@ -269,8 +272,52 @@ This project can be deployed as one web service because the Express backend also
 
 Recommended deployment stack:
 
-- Backend and frontend hosting: Render Web Service
+- Backend and frontend hosting: Vercel or Render
 - Cloud database: MongoDB Atlas
+
+## Vercel Deployment
+
+This project is also configured for Vercel deployment.
+
+Vercel-related files:
+
+- `vercel.json` handles frontend and API rewrites.
+- `api/index.js` exposes the Express backend as a Vercel serverless function.
+- Root `package.json` includes dependencies needed by Vercel.
+
+### Deploy on Vercel from Dashboard
+
+1. Push this project to GitHub.
+2. Go to Vercel.
+3. Click `Add New Project`.
+4. Import the GitHub repository.
+5. Keep the root directory as the project root.
+6. Add these environment variables:
+
+```env
+MONGO_URL=your_mongodb_atlas_connection_string
+JWT_SECRET=your_long_random_secret_key
+```
+
+7. Click `Deploy`.
+
+After deployment, Vercel will provide a live URL like:
+
+```text
+https://user-dashboard-app.vercel.app
+```
+
+### Deploy on Vercel from CLI
+
+Install and run Vercel CLI:
+
+```bash
+npx vercel --prod
+```
+
+If the CLI asks for setup options, select the current project directory and deploy it as a Node project.
+
+Important: local MongoDB URLs such as `mongodb://127.0.0.1:27017/mydb` will not work on Vercel. Use MongoDB Atlas for the deployed website.
 
 ### Step 1: Push Project to GitHub
 
